@@ -1,8 +1,16 @@
 import socket
 import pickle
 
-# Takes socket input and receive msg from a connected server
+
 def receive_msg(s, headersize):
+    """
+    Takes socket object as input and receives msg from a connected server
+
+    Args:
+        s (int): socket object
+        headersize (int): The header size to add before the message, which contains the 
+        length of the message
+    """
     full_msg = b''
     new_msg = True
     while True:
@@ -35,6 +43,14 @@ def receive_msg(s, headersize):
     
 
 def send_msg(s, raw_msg, headersize):
+    """
+    Receives msg from connected socket
+
+    Args:
+        s (int): Socket object
+        raw_msg (object): The message needs to be sent 
+        headersize (int): The header size added before a message containing the length of the message
+    """
 
     try:
         clientsocket, address = s.accept()
