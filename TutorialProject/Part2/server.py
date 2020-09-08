@@ -5,7 +5,7 @@ import threading
 
 class SocketThread(threading.Thread):
     
-    def __init__(self, connection, client_info, buffer_size=1024, recv_timeout=5):
+    def __init__(self, connection, client_info, buffer_size=1024, recv_timeout=20):
         threading.Thread.__init__(self)
         self.connection = connection
         self.client_info = client_info

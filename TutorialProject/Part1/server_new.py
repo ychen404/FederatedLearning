@@ -25,4 +25,3 @@ accept_timeout = 100
 s.settimeout(accept_timeout)
 d = model.state_dict()
 send_msg(s, d, HEADERSIZE)
-

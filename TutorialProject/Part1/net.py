@@ -1,5 +1,6 @@
 import torch
 
+
 class TwoLayerNet(torch.nn.Module):
     def __init__(self, D_in, H, D_out):
         """
@@ -19,6 +20,7 @@ class TwoLayerNet(torch.nn.Module):
         h_relu = self.linear1(x).clamp(min=0)
         y_pred = self.linear2(h_relu)
         return y_pred
+
 
 def train(model, x, y):
     # N is batch size; D_in is input dimension;

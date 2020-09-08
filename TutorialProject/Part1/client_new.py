@@ -21,4 +21,3 @@ receive_msg(s, HEADERSIZE)
 
 # receive state_dict
 # while True:
-

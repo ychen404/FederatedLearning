@@ -23,7 +23,7 @@ print("Received data from the client: {received_data}".format(received_data=rece
 msg = "Another message from the client."
 msg = pickle.dumps(msg)
 soc.sendall(msg)
-print("Client sent a message to the server.")
+print("Client sent another message to the server.")
 
 received_data = b''
 while str(received_data)[-2] != '.':
